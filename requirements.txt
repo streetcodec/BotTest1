@@ -2,3 +2,4 @@ google-generativeai
 streamlit
 streamlit-chat
 Speechrecognition
+PyAudio

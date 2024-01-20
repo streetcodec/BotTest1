@@ -47,7 +47,7 @@ if user_text:
         vidFile = open('Vids/Hi.mp4', 'rb')
         vidData = vidFile.read()
         st.video(vidData)
-    else
+    else:
         vidFile = open('Vids/Dialogue2.mp4', 'rb')
         vidData = vidFile.read()
         st.video(vidData)

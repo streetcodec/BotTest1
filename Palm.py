@@ -22,7 +22,10 @@ def response_api(prompt):
 user_text = ""  # Initialize user_text outside the if conditions
 
 if choice == "Text":
-    user_text = st.text_input("Enter text:") 
+    user_text = st.text_input("Enter text:")
+    vidFile = open('Vids/Hi.mp4', 'rb')
+    vidData = vidFile.read()
+    st.video(vidData) 
 else:
     if st.button("Start Voice Input"):
         r = sr.Recognizer()

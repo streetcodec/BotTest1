@@ -43,9 +43,14 @@ if user_text:
     
     st.session_state.generate.append(output)
     st.session_state.past.append(user_text)
-    vidFile = open('Vids/Hi.mp4', 'rb')
-    vidData = vidFile.read()
-    st.video(vidData) 
+    if user_text == "Hi"
+        vidFile = open('Vids/Hi.mp4', 'rb')
+        vidData = vidFile.read()
+        st.video(vidData)
+    else
+        vidFile = open('Vids/Dialogue2.mp4', 'rb')
+        vidData = vidFile.read()
+        st.video(vidData)
         
 if st.session_state['generate']:
     for i in range(len(st.session_state['generate'])-1,-1,-1):

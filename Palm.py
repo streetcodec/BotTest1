@@ -43,7 +43,7 @@ if user_text:
     
     st.session_state.generate.append(output)
     st.session_state.past.append(user_text)
-    if user_text == "Hi"
+    if user_text == "Hi":
         vidFile = open('Vids/Hi.mp4', 'rb')
         vidData = vidFile.read()
         st.video(vidData)

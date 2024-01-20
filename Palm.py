@@ -23,9 +23,7 @@ user_text = ""  # Initialize user_text outside the if conditions
 
 if choice == "Text":
     user_text = st.text_input("Enter text:")
-    vidFile = open('Vids/Hi.mp4', 'rb')
-    vidData = vidFile.read()
-    st.video(vidData) 
+    
 else:
     if st.button("Start Voice Input"):
         r = sr.Recognizer()
@@ -45,6 +43,9 @@ if user_text:
     
     st.session_state.generate.append(output)
     st.session_state.past.append(user_text)
+    vidFile = open('Vids/Hi.mp4', 'rb')
+    vidData = vidFile.read()
+    st.video(vidData) 
         
 if st.session_state['generate']:
     for i in range(len(st.session_state['generate'])-1,-1,-1):
